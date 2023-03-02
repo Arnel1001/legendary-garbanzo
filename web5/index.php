@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (isset($_GET['reset']) && $_GET['reset'] == true) {
+    session_destroy();
+    header('Location: index.php');
+}
 if(isset($_SESSION['view'])){
     $_SESSION['view'] = $_SESSION['view'] + 1;
 }else{
