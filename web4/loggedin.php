@@ -1,5 +1,14 @@
 <?php
+
    // test cookies if is set, display if set
+   if(isset($_COOKIE['auth']) && isset($_COOKIE['username']) && isset($_COOKIE['password'])){
+    echo "Cookie has been set, ";
+  
+}elseif(!isset($_COOKIE['auth']) && !isset($_COOKIE['username']) && !isset($_COOKIE['password'])){
+    header("Location: index.php"); 
+    exit();
+  } 
+
 ?>
 <html lang="en">
 <head>
